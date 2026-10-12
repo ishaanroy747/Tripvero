@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Tripvero | Travel Information and Support</title>
+
+  <meta
+    name="description"
+    content="Contact Tripvero with questions about our travel information, destination guides, website content and international travel resources."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tripvero">
+
+  <link
+    rel="canonical"
+    href="https://tripvero.wasmer.app/contact.html"
+  >
+
+  <style>
+    :root {
+      --navy: #102b46;
+      --teal: #087e83;
+      --gold: #e8a849;
+      --cream: #f7f8f5;
+      --white: #ffffff;
+      --text: #344454;
+      --muted: #637284;
+      --border: #e2e8ed;
+      --shadow: 0 10px 28px rgba(16, 43, 70, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 91%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      text-decoration: none;
+    }
+
+    .brand span {
+      color: var(--teal);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 23px;
+    }
+
+    nav a {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] {
+      color: var(--teal);
+    }
+
+    .hero {
+      padding: 75px 0 70px;
+      color: var(--white);
+      background: linear-gradient(
+        125deg,
+        #102b46 0%,
+        #164d62 65%,
+        #087e83 100%
+      );
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #ffd48b;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 750px;
+      margin-bottom: 18px;
+      font-size: clamp(35px, 5vw, 53px);
+      line-height: 1.15;
+      letter-spacing: -1.3px;
+    }
+
+    .hero p {
+      max-width: 730px;
+      color: #e5edf3;
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 55px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: clamp(26px, 3.5vw, 35px);
+      line-height: 1.3;
+    }
+
+    .section-heading p {
+      max-width: 790px;
+      color: var(--muted);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .contact-panel,
+    .form-panel {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+
+    .contact-panel h2,
+    .form-panel h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.35;
+    }
+
+    .contact-panel > p,
+    .form-panel > p {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .contact-item {
+      padding: 18px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-item h3 {
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .contact-item p {
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item a {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-note {
+      margin-top: 18px;
+      padding: 15px;
+      background: #edf6f5;
+      border-left: 4px solid var(--teal);
+      border-radius: 5px;
+      color: #344454;
+      font-size: 13px;
+    }
+
+    form {
+      display: grid;
+      gap: 17px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    label {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #cfd9e1;
+      border-radius: 7px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(8, 126, 131, 0.25);
+      border-color: var(--teal);
+    }
+
+    textarea {
+      min-height: 135px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      width: fit-content;
+      padding: 13px 23px;
+      border: 0;
+      border-radius: 7px;
+      background: var(--teal);
+      color: var(--white);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background: var(--navy);
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .form-status {
+      padding: 12px;
+      border-radius: 6px;
+      background: #edf6f5;
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .form-status:empty {
+      display: none;
+    }
+
+    .help-section {
+      padding: 0 0 55px;
+    }
+
+    .help-box {
+      padding: 34px;
+      background: var(--navy);
+      border-radius: 13px;
+      color: var(--white);
+    }
+
+    .help-box h2 {
+      margin-bottom: 12px;
+      font-size: 27px;
+    }
+
+    .help-box p {
+      max-width: 830px;
+      margin-bottom: 17px;
+      color: #e1eaf0;
+    }
+
+    .help-box a:not(.btn) {
+      color: #ffd48b;
+      text-underline-offset: 3px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 19px;
+      border-radius: 7px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+    }
+
+    footer {
+      padding: 32px 0;
+      background: #0b2035;
+      color: #d9e3eb;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .footer-brand {
+      margin-bottom: 8px;
+      color: var(--white);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      color: #4cc2bd;
+    }
+
+    .footer-copy {
+      max-width: 450px;
+      color: #bdcbd7;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: #e3ebf1;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ffd48b;
+    }
+
+    .copyright {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.13);
+      color: #aebdca;
+      font-size: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .nav-wrap {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 12px 17px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 58px 0;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-panel,
+      .form-panel {
+        padding: 23px;
+      }
+
+      .help-box {
+        padding: 25px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Tripvero home">
+        Trip<span>vero</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Get in Touch</span>
+
+        <h1>Contact Tripvero</h1>
+
+        <p>
+          Have a question about our travel guides, destination information or
+          website content? Use this page to find the appropriate contact route.
+          For questions about a specific holiday package or visa resource,
+          please contact the provider listed on the relevant page.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>How Can We Help?</h2>
+
+          <p>
+            We aim to make travel research easier by organising useful
+            destination resources and travel-planning information. Choose the
+            contact option that best matches your question.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+
+          <section class="contact-panel" aria-labelledby="contact-options">
+            <h2 id="contact-options">Contact Information</h2>
+
+            <p>
+              Tripvero is a travel information website. For package-specific
+              questions, use the contact details published by the relevant
+              travel provider.
+            </p>
+
+            <div class="contact-item">
+              <h3>Website Questions</h3>
+              <p>
+                For feedback about Tripvero's content, destination guides or
+                website information, use the message form on this page.
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <h3>Dubai Holiday Packages</h3>
+              <p>
+                For details about a package listed on Travel Saga Holidays,
+                visit the relevant package page to review its itinerary,
+                inclusions and contact options.
+              </p>
+              <p>
+                <a
+                  href="https://travelsagaholidays.in/travel/dubai-4-days-tour-package/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View a Dubai package resource →
+                </a>
+              </p>
+            </div>
+
+            <div class="contact-item">
+              <h3>Visa Information</h3>
+              <p>
+                For questions about a specific visa guide, first review the
+                destination's official immigration or embassy information.
+                For help with a linked resource, visit the relevant page.
+              </p>
+              <p>
+                <a
+                  href="https://travelsagaholidays.in/travel/dubai-tourist-visa-for-indians/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View the Dubai tourist visa guide →
+                </a>
+              </p>
+            </div>
+
+            <div class="contact-note">
+              <strong>Please note:</strong> Tripvero does not guarantee visa
+              approvals or immigration decisions. Requirements depend on the
+              destination and individual circumstances.
+            </div>
+          </section>
+
+          <section class="form-panel" aria-labelledby="message-heading">
+            <h2 id="message-heading">Send a Message</h2>
+
+            <p>
+              Complete the fields below to prepare a message for Tripvero.
+              The form requires an email application or form-processing service
+              to deliver messages.
+            </p>
+
+            <!--
+              This form is a front-end template.
+              Connect it to a form provider or your own secure backend
+              before publishing it as a working contact form.
+            -->
+
+            <form id="contact-form">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="100"
+                  placeholder="Enter your name"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="email">Email address</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="254"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="topic">What is your message about?</label>
+                <select id="topic" name="topic" required>
+                  <option value="">Select a topic</option>
+                  <option value="Website feedback">Website feedback</option>
+                  <option value="Travel guide question">Travel guide question</option>
+                  <option value="Dubai package resource">Dubai package resource</option>
+                  <option value="Visa information">Visa information</option>
+                  <option value="Correction to published content">Correction to published content</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="message">Your message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  maxlength="3000"
+                  placeholder="Tell us how we can help..."
+                  required
+                ></textarea>
+              </div>
+
+              <button class="submit-btn" type="submit">
+                Prepare Email
+              </button>
+
+              <p class="form-note">
+                This demo prepares an email using your device's default email
+                application. It does not send or store your message on this
+                website.
+              </p>
+
+              <p
+                class="form-status"
+                id="form-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+            </form>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="help-section">
+      <div class="container">
+        <div class="help-box">
+
+          <h2>Looking for a Travel Guide?</h2>
+
+          <p>
+            You may find the information you need in our travel resources.
+            Browse destination guides and visa-related information before
+            making travel decisions. For current entry rules, always confirm
+            details with the appropriate official authority.
+          </p>
+
+          <a class="btn" href="blogs.html">Explore Travel Guides</a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-wrap">
+        <div>
+          <div class="footer-brand">Trip<span>vero</span></div>
+
+          <p class="footer-copy">
+            Travel information and destination resources to help travellers
+            research holiday ideas, visa requirements and trip planning.
+          </p>
+        </div>
+
+        <div class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © <span id="current-year">2026</span> Tripvero. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!contactForm.reportValidity()) {
+        return;
+      }
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const topic = document.getElementById("topic").value;
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent(
+        "Tripvero enquiry: " + topic
+      );
+
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Topic: " + topic + "\n\n" +
+        "Message:\n" + message
+      );
+
+      formStatus.textContent =
+        "Your email application should open with your message prepared. " +
+        "Review it and send it from your email application.";
+
+      window.location.href =
+        "mailto:CONTACT_EMAIL_HERE?subject=" + subject + "&body=" + body;
+    });
+  </script>
+
+</body>
+</html>
