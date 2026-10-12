@@ -1,333 +1,1423 @@
 
-<style>
-/* ===== TRIPVERO FEATURED SERVICES ===== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#tripvero-featured-services {
-  display: block;
-  width: 100%;
-  padding: 64px 20px;
-  box-sizing: border-box;
-  background: #f4f8fb;
-  color: #243447;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <title>Tripvero | Travel Guides, Dubai Holidays & Visa Information</title>
 
-#tripvero-featured-services *,
-#tripvero-featured-services *::before,
-#tripvero-featured-services *::after {
-  box-sizing: border-box;
-}
+  <meta
+    name="description"
+    content="Explore travel guides, Dubai holiday ideas, international tourist visa information and practical tips to help plan your next journey with Tripvero."
+  >
 
-#tripvero-featured-services .tv-container {
-  width: 100%;
-  max-width: 1150px;
-  margin: 0 auto;
-}
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#102b46">
 
-#tripvero-featured-services .tv-heading {
-  max-width: 740px;
-  margin: 0 auto 38px;
-  text-align: center;
-}
+  <link rel="canonical" href="https://tripvero.wasmer.app/">
 
-#tripvero-featured-services .tv-label {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: #087e83;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tripvero | Travel Guides and Holiday Planning">
+  <meta
+    property="og:description"
+    content="Explore destination guides, Dubai holiday ideas, visa information and practical travel planning resources."
+  >
+  <meta property="og:url" content="https://tripvero.wasmer.app/">
 
-#tripvero-featured-services .tv-heading h2 {
-  margin: 0 0 15px;
-  color: #102b46;
-  font-size: clamp(27px, 4vw, 38px);
-  line-height: 1.25;
-  font-weight: 700;
-}
+  <style>
+    /* ========================================
+       TRIPVERO GLOBAL STYLES
+    ======================================== */
 
-#tripvero-featured-services .tv-heading p {
-  margin: 0;
-  color: #586779;
-  font-size: 16px;
-  line-height: 1.8;
-}
+    :root {
+      --navy: #102b46;
+      --teal: #087e83;
+      --gold: #e8a849;
+      --cream: #f7f9fb;
+      --white: #ffffff;
+      --text: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 8px 28px rgba(16, 43, 70, 0.07);
+    }
 
-#tripvero-featured-services .tv-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-#tripvero-featured-services .tv-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  padding: 28px 24px;
-  background: #ffffff;
-  border: 1px solid #e0e9ef;
-  border-radius: 14px;
-  box-shadow: 0 5px 20px rgba(16, 43, 70, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-#tripvero-featured-services .tv-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(16, 43, 70, 0.11);
-}
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-#tripvero-featured-services .tv-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  background: #e5f4f3;
-  color: #087e83;
-  font-size: 23px;
-  font-weight: 700;
-}
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-#tripvero-featured-services .tv-card h3 {
-  margin: 0 0 13px;
-  color: #102b46;
-  font-size: 21px;
-  line-height: 1.4;
-}
+    a {
+      color: var(--teal);
+    }
 
-#tripvero-featured-services .tv-card p {
-  margin: 0 0 22px;
-  color: #586779;
-  font-size: 15px;
-  line-height: 1.8;
-}
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
 
-#tripvero-featured-services .tv-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: auto;
-  color: #087e83;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.6;
-  text-decoration: none;
-}
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
 
-#tripvero-featured-services .tv-link:hover {
-  color: #102b46;
-  text-decoration: underline;
-}
+    .section {
+      padding: 76px 0;
+    }
 
-#tripvero-featured-services .tv-cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 36px;
-}
+    .section-light {
+      background: var(--cream);
+    }
 
-#tripvero-featured-services .tv-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 50px;
-  padding: 14px 27px;
-  border: 2px solid #087e83;
-  border-radius: 7px;
-  background: #087e83;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.4;
-  text-align: center;
-  text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease;
-}
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
 
-#tripvero-featured-services .tv-button:hover {
-  border-color: #102b46;
-  background: #102b46;
-  color: #ffffff;
-}
+    .section-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
 
-#tripvero-featured-services a:focus-visible {
-  outline: 3px solid #e8a849;
-  outline-offset: 4px;
-}
+    .section-heading h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.25;
+    }
 
-/* Tablet */
-@media (max-width: 900px) {
-  #tripvero-featured-services {
-    padding: 52px 20px;
-  }
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
 
-  #tripvero-featured-services .tv-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
+    .btn {
+      display: inline-flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 24px;
+      border: 2px solid var(--teal);
+      border-radius: 7px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
 
-  #tripvero-featured-services .tv-card:last-child {
-    grid-column: 1 / -1;
-  }
-}
+    .btn:hover {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
+    }
 
-/* Mobile */
-@media (max-width: 600px) {
-  #tripvero-featured-services {
-    padding: 42px 16px;
-  }
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.8);
+      background: transparent;
+      color: var(--white);
+    }
 
-  #tripvero-featured-services .tv-heading {
-    margin-bottom: 27px;
-    text-align: left;
-  }
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--navy);
+    }
 
-  #tripvero-featured-services .tv-heading h2 {
-    font-size: 28px;
-  }
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      color: var(--teal);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
 
-  #tripvero-featured-services .tv-heading p {
-    font-size: 15px;
-    line-height: 1.75;
-  }
+    .text-link:hover {
+      color: var(--navy);
+      text-decoration: underline;
+    }
 
-  #tripvero-featured-services .tv-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-  }
+    /* ========================================
+       HEADER AND NAVIGATION
+    ======================================== */
 
-  #tripvero-featured-services .tv-card:last-child {
-    grid-column: auto;
-  }
+    .site-header {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+      width: 100%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.98);
+    }
 
-  #tripvero-featured-services .tv-card {
-    padding: 23px 20px;
-  }
+    .nav-container {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-  #tripvero-featured-services .tv-card h3 {
-    font-size: 20px;
-  }
+    .brand {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+      text-decoration: none;
+    }
 
-  #tripvero-featured-services .tv-cta {
-    margin-top: 25px;
-  }
+    .brand-mark {
+      display: flex;
+      width: 39px;
+      height: 39px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 21px;
+      font-weight: 800;
+    }
 
-  #tripvero-featured-services .tv-button {
-    width: 100%;
-    max-width: 340px;
-    padding: 14px 18px;
-  }
-}
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 26px;
+    }
 
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  #tripvero-featured-services .tv-card,
-  #tripvero-featured-services .tv-button {
-    transition: none;
-  }
+    .main-nav a {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
 
-  #tripvero-featured-services .tv-card:hover {
-    transform: none;
-  }
-}
-</style>
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--teal);
+    }
 
+    .main-nav .nav-cta {
+      padding: 10px 16px;
+      border-radius: 6px;
+      background: var(--navy);
+      color: var(--white);
+    }
 
-<!-- TRIPVERO FEATURED SERVICES -->
+    .main-nav .nav-cta:hover {
+      background: var(--teal);
+      color: var(--white);
+    }
 
-<section id="tripvero-featured-services" aria-labelledby="tv-services-heading">
-  <div class="tv-container">
+    /* ========================================
+       HERO
+    ======================================== */
 
-    <div class="tv-heading">
-      <span class="tv-label">Explore Tripvero</span>
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 95px 0 100px;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(8, 126, 131, 0.28),
+          transparent 30%
+        ),
+        linear-gradient(125deg, #102b46 0%, #16465e 60%, #087e83 100%);
+      color: var(--white);
+    }
 
-      <h2 id="tv-services-heading">
-        Travel Resources for Your Next Journey
-      </h2>
+    .hero::after {
+      position: absolute;
+      right: -120px;
+      bottom: -250px;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
 
-      <p>
-        Discover useful starting points for your travel plans, from Dubai
-        holiday ideas to international tourist visa information and practical
-        destination guides.
-      </p>
-    </div>
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 790px;
+    }
 
-    <div class="tv-grid">
+    .hero-label {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 30px;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
 
-      <!-- Service 1 -->
-      <article class="tv-card">
-        <div class="tv-icon" aria-hidden="true">D</div>
+    .hero h1 {
+      margin: 0 0 22px;
+      color: var(--white);
+      font-size: clamp(37px, 6vw, 59px);
+      line-height: 1.12;
+      letter-spacing: -1.3px;
+    }
 
-        <h3>Dubai Tour Package from India</h3>
+    .hero p {
+      max-width: 690px;
+      margin: 0 0 30px;
+      color: #e5edf4;
+      font-size: 18px;
+      line-height: 1.85;
+    }
 
-        <p>
-          Explore Dubai holiday options, review itinerary ideas and compare
-          different trip durations before deciding which travel plan suits you.
-        </p>
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
 
-        <a
-          class="tv-link"
-          href="https://travelsagaholidays.in/travel/dubai-4-days-tour-package/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore Dubai package <span aria-hidden="true">→</span>
-        </a>
-      </article>
+    .hero .btn {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--navy);
+    }
 
-      <!-- Service 2 -->
-      <article class="tv-card">
-        <div class="tv-icon" aria-hidden="true">V</div>
+    .hero .btn:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--navy);
+    }
 
-        <h3>International Tourist Visa for Indians</h3>
+    .hero .btn-outline {
+      border-color: rgba(255, 255, 255, 0.7);
+      background: transparent;
+      color: var(--white);
+    }
 
-        <p>
-          Begin researching tourist visa requirements for overseas trips.
-          Check the documents, eligibility rules and entry conditions relevant
-          to your destination using official sources.
-        </p>
+    .hero .btn-outline:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--navy);
+    }
 
-        <a
-          class="tv-link"
-          href="https://travelsagaholidays.in/travel/japan-tourist-visa-for-indians/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore visa information <span aria-hidden="true">→</span>
-        </a>
-      </article>
+    /* ========================================
+       INTRODUCTION STRIP
+    ======================================== */
 
-      <!-- Service 3 -->
-      <article class="tv-card">
-        <div class="tv-icon" aria-hidden="true">T</div>
+    .intro-strip {
+      padding: 29px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
 
-        <h3>Travel Planning Guides</h3>
+    .intro-inner {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
 
-        <p>
-          Find destination inspiration and practical planning information
-          to help you research places, organise your trip and prepare before
-          departure.
-        </p>
+    .intro-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+    }
 
-        <a class="tv-link" href="blogs.html">
-          Read travel guides <span aria-hidden="true">→</span>
-        </a>
-      </article>
+    .intro-number {
+      display: flex;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9px;
+      background: #e5f4f3;
+      color: var(--teal);
+      font-weight: 800;
+    }
 
-    </div>
+    .intro-item h3 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 15px;
+    }
 
-    <div class="tv-cta">
-      <a class="tv-button" href="services.html">
-        Explore All Services <span aria-hidden="true">→</span>
+    .intro-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* ========================================
+       FEATURED SERVICES
+    ======================================== */
+
+    #featured-services {
+      padding: 76px 0;
+      background: var(--cream);
+    }
+
+    #featured-services .tv-container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    #featured-services .tv-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    #featured-services .tv-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    #featured-services .tv-heading h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.25;
+    }
+
+    #featured-services .tv-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    #featured-services .tv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 24px;
+    }
+
+    #featured-services .tv-card {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #featured-services .tv-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(16, 43, 70, 0.12);
+    }
+
+    #featured-services .tv-icon {
+      display: flex;
+      width: 52px;
+      height: 52px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 19px;
+      border-radius: 12px;
+      background: #e5f4f3;
+      color: var(--teal);
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    #featured-services .tv-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.4;
+    }
+
+    #featured-services .tv-card p {
+      margin: 0 0 23px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    #featured-services .tv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      color: var(--teal);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    #featured-services .tv-link:hover {
+      color: var(--navy);
+      text-decoration: underline;
+    }
+
+    #featured-services .tv-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    #featured-services .tv-button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 27px;
+      border: 2px solid var(--teal);
+      border-radius: 7px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    #featured-services .tv-button:hover {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    /* ========================================
+       PLANNING TIPS
+    ======================================== */
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .tip-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--white);
+    }
+
+    .tip-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    .tip-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .tip-tag {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background: #e5f4f3;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ========================================
+       ABOUT TRIPVERO
+    ======================================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about-visual {
+      display: flex;
+      min-height: 300px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 38px;
+      border-radius: 16px;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(8, 126, 131, 0.45),
+          transparent 35%
+        ),
+        linear-gradient(135deg, var(--navy), #1b586a);
+      color: var(--white);
+    }
+
+    .about-visual .about-mark {
+      display: flex;
+      width: 65px;
+      height: 65px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 14px;
+      color: var(--gold);
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .about-visual h3 {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-size: 27px;
+      line-height: 1.3;
+    }
+
+    .about-visual p {
+      margin: 0;
+      color: #e5edf4;
+      font-size: 15px;
+    }
+
+    .about-copy .section-label {
+      margin-bottom: 9px;
+    }
+
+    .about-copy h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.25;
+    }
+
+    .about-copy p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* ========================================
+       TRANSPARENCY NOTE
+    ======================================== */
+
+    .disclaimer {
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      background: #f7f9fb;
+    }
+
+    .disclaimer-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .disclaimer-symbol {
+      display: flex;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #fff0d7;
+      color: #785013;
+      font-weight: 800;
+    }
+
+    .disclaimer h2 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .disclaimer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    .site-footer {
+      padding: 48px 0 20px;
+      background: #0b2035;
+      color: #d9e4ee;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 34px;
+    }
+
+    .footer-brand {
+      display: inline-block;
+      margin-bottom: 13px;
+      color: var(--white);
+      font-size: 24px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .footer-about {
+      max-width: 390px;
+      margin: 0;
+      color: #b8c7d5;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-column h2 {
+      margin: 0 0 16px;
+      color: var(--white);
+      font-size: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: #c4d1dc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      color: #aebdca;
+      font-size: 12px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* ========================================
+       TABLET RESPONSIVENESS
+    ======================================== */
+
+    @media (max-width: 900px) {
+      .main-nav {
+        gap: 16px;
+      }
+
+      .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      #featured-services .tv-grid,
+      .tips-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #featured-services .tv-card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .about-visual {
+        min-height: 250px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand-column {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* ========================================
+       MOBILE RESPONSIVENESS
+    ======================================== */
+
+    @media (max-width: 650px) {
+      .container {
+        padding-right: 17px;
+        padding-left: 17px;
+      }
+
+      .section {
+        padding: 49px 0;
+      }
+
+      .nav-container {
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 14px;
+        padding-bottom: 13px;
+      }
+
+      .brand {
+        font-size: 23px;
+      }
+
+      .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 9px 18px;
+      }
+
+      .main-nav a {
+        font-size: 13px;
+      }
+
+      .main-nav .nav-cta {
+        padding: 5px 10px;
+      }
+
+      .hero {
+        padding: 61px 0 66px;
+      }
+
+      .hero h1 {
+        font-size: clamp(35px, 9vw, 45px);
+        letter-spacing: -0.6px;
+      }
+
+      .hero p {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .section-heading {
+        margin-bottom: 28px;
+        text-align: left;
+      }
+
+      .section-heading h2 {
+        font-size: 29px;
+      }
+
+      #featured-services {
+        padding: 49px 0;
+      }
+
+      #featured-services .tv-container {
+        padding-right: 17px;
+        padding-left: 17px;
+      }
+
+      #featured-services .tv-heading {
+        margin-bottom: 27px;
+        text-align: left;
+      }
+
+      #featured-services .tv-heading h2 {
+        font-size: 29px;
+      }
+
+      #featured-services .tv-heading p {
+        font-size: 15px;
+      }
+
+      #featured-services .tv-grid,
+      .tips-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      #featured-services .tv-card:last-child {
+        grid-column: auto;
+      }
+
+      #featured-services .tv-card {
+        padding: 23px 20px;
+      }
+
+      #featured-services .tv-card h3 {
+        font-size: 20px;
+      }
+
+      #featured-services .tv-cta {
+        margin-top: 25px;
+      }
+
+      #featured-services .tv-button {
+        width: 100%;
+        max-width: 340px;
+        padding: 14px 18px;
+      }
+
+      .tip-card {
+        padding: 22px;
+      }
+
+      .about-visual {
+        min-height: 230px;
+        padding: 27px;
+      }
+
+      .about-copy h2 {
+        font-size: 29px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-brand-column {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      #featured-services .tv-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================
+       HEADER
+  ======================================== -->
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="index.html" aria-label="Tripvero homepage">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>Tripvero</span>
       </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="services.html">Explore Services</a>
+      </nav>
+
     </div>
+  </header>
 
-  </div>
-</section>
 
-<!-- END TRIPVERO FEATURED SERVICES -->
+  <main>
+
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <span class="hero-label">Explore More. Plan Better.</span>
+
+          <h1>
+            Discover New Destinations and Plan Your Next Journey
+          </h1>
+
+          <p>
+            Welcome to Tripvero, a travel information platform for discovering
+            destinations, researching holiday ideas and learning about
+            international tourist visa requirements. Find helpful starting
+            points for planning your next trip with greater confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="services.html">
+              Explore Travel Resources
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="btn btn-outline" href="blogs.html">
+              Read Travel Guides
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         INTRODUCTION STRIP
+    ======================================== -->
+
+    <section class="intro-strip" aria-label="What you can explore">
+      <div class="container">
+        <div class="intro-inner">
+
+          <article class="intro-item">
+            <span class="intro-number" aria-hidden="true">01</span>
+            <div>
+              <h3>Destination Inspiration</h3>
+              <p>
+                Explore places, holiday ideas and useful travel information.
+              </p>
+            </div>
+          </article>
+
+          <article class="intro-item">
+            <span class="intro-number" aria-hidden="true">02</span>
+            <div>
+              <h3>Travel Planning</h3>
+              <p>
+                Research itineraries, trip durations and planning essentials.
+              </p>
+            </div>
+          </article>
+
+          <article class="intro-item">
+            <span class="intro-number" aria-hidden="true">03</span>
+            <div>
+              <h3>Visa Research</h3>
+              <p>
+                Find starting points for researching international entry rules.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         FEATURED SERVICES
+    ======================================== -->
+
+    <section id="featured-services" aria-labelledby="tv-services-heading">
+      <div class="tv-container">
+
+        <div class="tv-heading">
+          <span class="tv-label">Explore Tripvero</span>
+
+          <h2 id="tv-services-heading">
+            Travel Resources for Your Next Journey
+          </h2>
+
+          <p>
+            Start exploring with our featured travel resources. From Dubai
+            holiday ideas to international visa information and practical
+            travel guides, discover useful starting points for your plans.
+          </p>
+        </div>
+
+        <div class="tv-grid">
+
+          <!-- Featured Service 1 -->
+
+          <article class="tv-card">
+            <div class="tv-icon" aria-hidden="true">D</div>
+
+            <h3>Dubai Tour Package from India</h3>
+
+            <p>
+              Explore Dubai holiday ideas and different trip durations.
+              Review itinerary details and compare available options before
+              deciding which travel plan suits your interests.
+            </p>
+
+            <a
+              class="tv-link"
+              href="https://travelsagaholidays.in/travel/dubai-4-days-tour-package/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Dubai Package
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Featured Service 2 -->
+
+          <article class="tv-card">
+            <div class="tv-icon" aria-hidden="true">V</div>
+
+            <h3>International Tourist Visa for Indians</h3>
+
+            <p>
+              Begin researching tourist visa information for overseas trips.
+              Check destination-specific documentation, eligibility and
+              current entry conditions through official sources.
+            </p>
+
+            <a
+              class="tv-link"
+              href="https://travelsagaholidays.in/travel/japan-tourist-visa-for-indians/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Visa Information
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Featured Service 3 -->
+
+          <article class="tv-card">
+            <div class="tv-icon" aria-hidden="true">T</div>
+
+            <h3>Travel Planning Guides</h3>
+
+            <p>
+              Discover destination inspiration and practical planning
+              information to help you research places, organise your trip
+              and prepare for your journey.
+            </p>
+
+            <a class="tv-link" href="blogs.html">
+              Read Travel Guides
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="tv-cta">
+          <a class="tv-button" href="services.html">
+            Explore All Services
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         TRAVEL PLANNING TIPS
+    ======================================== -->
+
+    <section class="section" id="planning-tips">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">Plan With Care</span>
+
+          <h2>Three Things to Check Before You Travel</h2>
+
+          <p>
+            A little research before departure can help you prepare for
+            important parts of your journey. Start with these practical checks.
+          </p>
+        </div>
+
+        <div class="tips-grid">
+
+          <article class="tip-card">
+            <span class="tip-tag">Destination</span>
+
+            <h3>Research Your Destination</h3>
+
+            <p>
+              Learn about local transport, weather, neighbourhoods, cultural
+              expectations and the attractions you want to visit. Check
+              current information before finalising your plans.
+            </p>
+          </article>
+
+          <article class="tip-card">
+            <span class="tip-tag">Documents</span>
+
+            <h3>Check Travel and Visa Requirements</h3>
+
+            <p>
+              Review passport validity, visa eligibility, required documents
+              and entry conditions for your nationality. Consult the relevant
+              embassy or official immigration website for the latest rules.
+            </p>
+          </article>
+
+          <article class="tip-card">
+            <span class="tip-tag">Preparation</span>
+
+            <h3>Organise Your Travel Plans</h3>
+
+            <p>
+              Check your bookings, transport arrangements, travel insurance
+              needs and important documents. Keep copies of essential
+              information accessible during your trip.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         ABOUT TRIPVERO
+    ======================================== -->
+
+    <section class="section section-light" id="about-tripvero">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-visual">
+            <div class="about-mark" aria-hidden="true">T</div>
+
+            <h3>Explore the World With Better Preparation</h3>
+
+            <p>
+              Destination ideas, travel research and practical planning
+              information in one place.
+            </p>
+          </div>
+
+          <div class="about-copy">
+            <span class="section-label">About Tripvero</span>
+
+            <h2>A Helpful Starting Point for Travel Research</h2>
+
+            <p>
+              Tripvero is a travel information website designed to help
+              visitors explore destination ideas, research holiday options
+              and find useful information before travelling. Our content
+              covers travel planning, destination research and international
+              tourist visa topics.
+            </p>
+
+            <p>
+              We aim to present information in a clear and practical way,
+              helping readers identify what to research next. Travel rules,
+              visa policies, schedules and service details can change, so
+              readers should confirm important information with the relevant
+              official authority or service provider before making decisions.
+            </p>
+
+            <p>
+              Tripvero also links to selected third-party travel resources
+              where readers can explore further details about particular
+              holiday packages and visa-related topics.
+            </p>
+
+            <a class="btn" href="about.html">
+              Learn More About Us
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         TRANSPARENCY AND VISA DISCLAIMER
+    ======================================== -->
+
+    <section class="disclaimer" aria-labelledby="disclaimer-heading">
+      <div class="container">
+
+        <div class="disclaimer-inner">
+          <span class="disclaimer-symbol" aria-hidden="true">i</span>
+
+          <div>
+            <h2 id="disclaimer-heading">
+              Important Travel Information
+            </h2>
+
+            <p>
+              Tripvero provides travel information and links to third-party
+              resources. We are not an immigration authority and do not
+              guarantee visa approvals, processing times or entry into any
+              country. Visa requirements and decisions depend on the
+              relevant authorities and individual circumstances. Always
+              verify current rules through official sources. Package and
+              service details on external websites are provided by their
+              respective providers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+          <a class="footer-brand" href="index.html">Tripvero</a>
+
+          <p class="footer-about">
+            Explore destination ideas, travel planning information,
+            holiday resources and international tourist visa topics
+            to help prepare for your next journey.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h2>Quick Links</h2>
+
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h2>Explore Resources</h2>
+
+          <nav class="footer-links" aria-label="Travel resources">
+            <a href="services.html">Dubai Holiday Ideas</a>
+            <a href="services.html">International Visa Information</a>
+            <a href="blogs.html">Travel Planning Guides</a>
+            <a
+              href="https://travelsagaholidays.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Travel Saga Holidays
+              <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2026</span> Tripvero.
+          All rights reserved.
+        </p>
+
+        <p>
+          Travel information is provided for general research purposes.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    // Update the copyright year automatically.
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
