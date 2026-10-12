@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Tripvero | Our Travel Information & Purpose</title>
+  <meta name="description" content="Learn about Tripvero, a travel information platform sharing destination guides, visa resources, Dubai holiday ideas and travel planning tips.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#102b46">
+
+  <style>
+    :root {
+      --navy: #102b46;
+      --teal: #087e83;
+      --gold: #e8a849;
+      --cream: #f7f8f5;
+      --text: #334155;
+      --muted: #667085;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.75;
+      background: var(--white);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e7edf0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .logo {
+      color: var(--navy);
+      font-size: 29px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span { color: var(--teal); }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover { color: var(--teal); }
+
+    .nav-cta {
+      padding: 10px 16px;
+      background: var(--navy);
+      color: white;
+      border-radius: 5px;
+    }
+
+    .hero {
+      color: white;
+      padding: 95px 0;
+      background:
+        linear-gradient(100deg, rgba(8, 30, 48, .91), rgba(8, 30, 48, .62)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    .hero-content { max-width: 790px; }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.5vw, 60px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e8f0f5;
+      max-width: 700px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 12px 21px;
+      margin-top: 26px;
+      border-radius: 5px;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .button:hover { background: #f3bd6b; }
+
+    section { padding: 72px 0; }
+
+    .section-label {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.25;
+      margin-bottom: 20px;
+      letter-spacing: -.7px;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      max-width: 850px;
+    }
+
+    .intro p,
+    .content-copy p {
+      margin-bottom: 17px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .soft { background: var(--cream); }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .feature-image {
+      width: 100%;
+      min-height: 340px;
+      height: 100%;
+      max-height: 430px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+
+    .principle {
+      background: white;
+      border: 1px solid #e2e9ed;
+      border-radius: 8px;
+      padding: 25px;
+    }
+
+    .principle p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .number {
+      color: var(--teal);
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .topic-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .topic {
+      background: white;
+      border: 1px solid #e1e9ec;
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .topic p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .topic a {
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .standards {
+      background: var(--navy);
+      color: white;
+    }
+
+    .standards h2 { color: white; }
+
+    .standards .section-label { color: var(--gold); }
+
+    .standards-intro {
+      max-width: 780px;
+      color: #d6e2ea;
+      margin-bottom: 28px;
+    }
+
+    .standards-list {
+      padding-left: 22px;
+      color: #e3ebf0;
+    }
+
+    .standards-list li { margin-bottom: 12px; }
+
+    .disclaimer {
+      margin-top: 28px;
+      padding: 20px;
+      border-left: 3px solid var(--gold);
+      background: rgba(255,255,255,.07);
+      color: #e3ebf0;
+      font-size: 14px;
+    }
+
+    .closing {
+      text-align: center;
+      background: #eaf4f2;
+    }
+
+    .closing p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    footer {
+      background: #091e30;
+      color: #d4e0e9;
+      padding: 48px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      padding-bottom: 30px;
+    }
+
+    footer .logo {
+      display: inline-block;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: #b8c7d2;
+    }
+
+    footer h3 {
+      color: white;
+      font-size: 16px;
+    }
+
+    .footer-links { list-style: none; }
+
+    .footer-links li {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .copyright {
+      border-top: 1px solid #294052;
+      padding-top: 18px;
+      text-align: center;
+      color: #aabac7;
+      font-size: 12px;
+    }
+
+    @media (max-width: 780px) {
+      .navbar {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { gap: 13px 18px; }
+
+      .two-column { grid-template-columns: 1fr; }
+
+      .principles,
+      .topic-list { grid-template-columns: 1fr; }
+
+      .feature-image { min-height: 250px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 70px 0; }
+      section { padding: 55px 0; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav a { font-size: 13px; }
+      .logo { font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="index.html" aria-label="Tripvero home">
+      Trip<span>vero</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="blogs.html">Travel Guides</a>
+      <a href="about.html" aria-current="page">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="services.html">Explore Resources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="eyebrow">Get to know Tripvero</div>
+      <h1>Travel Planning Starts With Better Information</h1>
+      <p>
+        We bring destination inspiration, practical travel guidance, and
+        international travel resources together to help people research
+        their options and prepare for their next journey.
+      </p>
+      <a class="button" href="services.html">Explore Our Travel Resources</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container intro">
+      <div class="section-label">Who we are</div>
+      <h2>About Tripvero</h2>
+
+      <p>
+        Tripvero is a travel information website for people who want to
+        explore destinations, compare holiday ideas, and learn more about
+        the practical details involved in planning a trip. Our focus is
+        on making travel research easier to navigate, especially for
+        Indian travellers considering international holidays.
+      </p>
+
+      <p>
+        Planning a journey often brings several questions: Which
+        destination suits your interests? What should you know before
+        applying for a visa? Which experiences might fit your schedule?
+        Tripvero brings these topics into one place so readers can start
+        their research with a clearer understanding of the options
+        available to them.
+      </p>
+
+      <p>
+        Our website covers international tourist visa information,
+        Dubai holiday ideas, destination guides, and holiday inspiration
+        for different travel styles. We aim to explain topics in
+        straightforward language and help readers identify what they
+        should verify before making travel arrangements.
+      </p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="container two-column">
+      <div class="content-copy">
+        <div class="section-label">Our purpose</div>
+        <h2>Useful Travel Information, Without the Unnecessary Complexity</h2>
+
+        <p>
+          We believe that good travel planning begins with asking the
+          right questions and finding information that is relevant to
+          your trip. A family holiday, a honeymoon, and a first
+          international journey can all require different kinds of
+          preparation.
+        </p>
+
+        <p>
+          Tripvero is designed to help readers explore destinations,
+          understand common travel-planning considerations, and discover
+          resources that can guide their next steps.
+        </p>
+
+        <p>
+          Our goal is not to make every destination sound perfect.
+          It is to help readers research their choices, consider
+          practical details, and make decisions that suit their own
+          plans, preferences, and circumstances.
+        </p>
+      </div>
+
+      <div>
+        <img
+          class="feature-image"
+          src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1100&q=85"
+          alt="Travel planning with a map and travel essentials"
+          loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-label">What guides our work</div>
+      <h2>Our Approach to Travel Information</h2>
+      <p class="muted">
+        We aim to make our content useful, understandable, and transparent
+        about what readers should verify independently.
+      </p>
+
+      <div class="principles">
+        <article class="principle">
+          <div class="number">01 — CLARITY</div>
+          <h3>Plain-Language Guidance</h3>
+          <p>
+            We aim to explain travel topics in a clear, organized way,
+            helping readers identify the details that matter to their plans.
+          </p>
+        </article>
+
+        <article class="principle">
+          <div class="number">02 — CARE</div>
+          <h3>Practical Preparation</h3>
+          <p>
+            We highlight useful planning considerations, including
+            destination research, travel documents, itineraries, and
+            questions to resolve before departure.
+          </p>
+        </article>
+
+        <article class="principle">
+          <div class="number">03 — TRANSPARENCY</div>
+          <h3>Know What to Verify</h3>
+          <p>
+            Visa rules, entry conditions, schedules, and travel services
+            can change. We encourage readers to confirm important details
+            with relevant official or service-provider sources.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="container">
+      <div class="section-label">What you can explore</div>
+      <h2>Travel Topics Covered by Tripvero</h2>
+      <p class="muted">
+        Our main areas of coverage are designed to support different
+        stages of international holiday research.
+      </p>
+
+      <div class="topic-list">
+        <article class="topic">
+          <h3>International Tourist Visa for Indians</h3>
+          <p>
+            Explore destination-specific visa information, common
+            documentation considerations, and questions to check before
+            submitting an application.
+          </p>
+          <a href="services.html#visa">Explore visa resources →</a>
+        </article>
+
+        <article class="topic">
+          <h3>Dubai Tour Package from India</h3>
+          <p>
+            Discover Dubai attractions, itinerary inspiration, and holiday
+            ideas for couples, families, and other travel styles.
+          </p>
+          <a href="services.html#dubai">Explore Dubai travel ideas →</a>
+        </article>
+
+        <article class="topic">
+          <h3>Holiday Packages From India</h3>
+          <p>
+            Find inspiration for international holidays, cultural
+            experiences, scenic escapes, family trips, and romantic breaks.
+          </p>
+          <a href="services.html#holidays">Explore holiday ideas →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="standards">
+    <div class="container">
+      <div class="section-label">Accuracy and transparency</div>
+      <h2>How to Use Our Travel Guides</h2>
+
+      <p class="standards-intro">
+        Travel information can vary by nationality, destination, travel
+        dates, and individual circumstances. Our pages are intended to
+        help readers research and prepare, not replace official decisions
+        or personalized professional advice.
+      </p>
+
+      <ul class="standards-list">
+        <li>
+          <strong>Check official requirements.</strong>
+          Confirm visa rules, entry conditions, permitted stay, and
+          document requirements with the relevant embassy, consulate,
+          or immigration authority.
+        </li>
+        <li>
+          <strong>Review information before departure.</strong>
+          Requirements and travel arrangements may change after you
+          begin planning, so check the latest information before travel.
+        </li>
+        <li>
+          <strong>Consider your individual circumstances.</strong>
+          A requirement that applies to one traveller may not apply
+          to another. Check the rules relevant to your passport and trip.
+        </li>
+        <li>
+          <strong>Make informed comparisons.</strong>
+          Review itineraries, inclusions, exclusions, cancellation
+          conditions, and other relevant terms before purchasing a
+          travel product or service.
+        </li>
+      </ul>
+
+      <div class="disclaimer">
+        <strong>Important:</strong> Tripvero is a travel information
+        platform. Unless a specific page clearly states otherwise,
+        our guides should not be treated as official government advice.
+        Publishing visa information does not mean that Tripvero can
+        guarantee a visa approval or an immigration decision.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container two-column">
+      <div>
+        <div class="section-label">Our readers</div>
+        <h2>Who Is Tripvero For?</h2>
+        <p>
+          Tripvero is for travellers who want a useful starting point
+          for researching an upcoming trip. That may include first-time
+          international travellers, couples planning a getaway, families
+          comparing destinations, or readers looking into visa requirements.
+        </p>
+        <p>
+          You do not need to have every detail decided before you begin.
+          Use our resources to explore possibilities, identify questions,
+          and determine which information you need to confirm next.
+        </p>
+      </div>
+
+      <div>
+        <img
+          class="feature-image"
+          src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1100&q=85"
+          alt="Beautiful lake and mountain scenery for travel inspiration"
+          loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="container">
+      <div class="section-label">Start exploring</div>
+      <h2>Make Your Next Journey a More Informed One</h2>
+      <p>
+        Explore destination information, research visa considerations,
+        and discover holiday ideas with Tripvero. Wherever you hope to go,
+        begin with useful information and verify the details that matter
+        to your journey.
+      </p>
+      <a class="button" href="services.html">Explore Travel Resources</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="index.html">Trip<span>vero</span></a>
+        <p>
+          Destination inspiration, visa information, and practical
+          travel resources to help people research their next journey.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore Tripvero</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blogs.html">Travel Guides</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Popular Topics</h3>
+        <ul class="footer-links">
+          <li><a href="services.html#visa">Visa Resources</a></li>
+          <li><a href="services.html#dubai">Dubai Travel Ideas</a></li>
+          <li><a href="services.html#holidays">Holiday Inspiration</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 Tripvero. All rights reserved.
+      Check official sources for current visa and entry requirements.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
