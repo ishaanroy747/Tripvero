@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Travel Blog | Destination Guides & Travel Tips | Tripvero</title>
+
+  <meta
+    name="description"
+    content="Explore the Tripvero travel blog for destination inspiration, holiday planning ideas, international visa information and practical travel tips. Articles coming soon."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#102b46">
+
+  <link rel="canonical" href="https://tripvero.wasmer.app/blogs.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Travel Blog | Tripvero">
+  <meta
+    property="og:description"
+    content="Discover travel inspiration, destination guides, visa research and practical planning tips from Tripvero."
+  >
+  <meta property="og:url" content="https://tripvero.wasmer.app/blogs.html">
+
+  <style>
+    :root {
+      --navy: #102b46;
+      --teal: #087e83;
+      --gold: #e8a849;
+      --cream: #f5f8fb;
+      --white: #ffffff;
+      --text: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--teal);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.98);
+    }
+
+    .nav-container {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: flex;
+      width: 39px;
+      height: 39px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 21px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .main-nav a {
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: var(--teal);
+    }
+
+    .main-nav .nav-cta {
+      padding: 10px 16px;
+      border-radius: 6px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .main-nav .nav-cta:hover {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 23px;
+      border: 2px solid var(--teal);
+      border-radius: 7px;
+      background: var(--teal);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--navy);
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .btn-light {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .btn-light:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    /* BLOG HERO */
+
+    .blog-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 85px 0 90px;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(8, 126, 131, 0.35),
+          transparent 32%
+        ),
+        linear-gradient(125deg, #102b46, #16465e 65%, #087e83);
+      color: var(--white);
+    }
+
+    .blog-hero::after {
+      position: absolute;
+      right: -150px;
+      bottom: -280px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 30px;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .blog-hero h1 {
+      margin: 0 0 22px;
+      color: var(--white);
+      font-size: clamp(38px, 6vw, 57px);
+      line-height: 1.14;
+      letter-spacing: -1px;
+    }
+
+    .blog-hero p {
+      max-width: 700px;
+      margin: 0 0 28px;
+      color: #e4edf5;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .blog-hero .btn {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .blog-hero .btn:hover {
+      border-color: var(--white);
+      background: var(--white);
+    }
+
+    .blog-hero .btn-light {
+      border-color: rgba(255, 255, 255, 0.75);
+      background: transparent;
+      color: var(--white);
+    }
+
+    .blog-hero .btn-light:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    /* INTRODUCTION */
+
+    .intro-section {
+      padding: 65px 0 40px;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 37px);
+      line-height: 1.3;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* BLOG CATEGORIES */
+
+    .categories-section {
+      padding: 30px 0 75px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 28px 25px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--white);
+      box-shadow: 0 6px 24px rgba(16, 43, 70, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(16, 43, 70, 0.1);
+    }
+
+    .category-icon {
+      display: flex;
+      width: 53px;
+      height: 53px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 19px;
+      border-radius: 12px;
+      background: #e5f4f3;
+      color: var(--teal);
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .category-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 21px;
+      line-height: 1.4;
+    }
+
+    .category-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* COMING SOON */
+
+    .coming-section {
+      padding: 76px 0;
+      background: var(--cream);
+    }
+
+    .coming-card {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      align-items: center;
+      gap: 45px;
+      padding: 45px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 8px 30px rgba(16, 43, 70, 0.05);
+    }
+
+    .coming-visual {
+      display: flex;
+      min-height: 260px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      border-radius: 14px;
+      background:
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(8, 126, 131, 0.38),
+          transparent 38%
+        ),
+        linear-gradient(135deg, var(--navy), #16465e);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .coming-visual .book-icon {
+      display: flex;
+      width: 72px;
+      height: 72px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 18px;
+      color: var(--gold);
+      font-size: 34px;
+      font-weight: 800;
+    }
+
+    .coming-visual strong {
+      color: var(--white);
+      font-size: 21px;
+    }
+
+    .coming-copy .coming-label {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 6px 11px;
+      border-radius: 5px;
+      background: #fff0d7;
+      color: #79500e;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .coming-copy h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.3;
+    }
+
+    .coming-copy p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* EDITORIAL PROMISE */
+
+    .promise-section {
+      padding: 70px 0;
+    }
+
+    .promise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .promise-item {
+      padding: 5px 0;
+    }
+
+    .promise-item h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .promise-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    /* CTA */
+
+    .blog-cta {
+      padding: 62px 0;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .blog-cta h2 {
+      margin: 0 0 13px;
+      color: var(--white);
+      font-size: clamp(27px, 4vw, 36px);
+      line-height: 1.3;
+    }
+
+    .blog-cta p {
+      max-width: 670px;
+      margin: 0 auto 25px;
+      color: #d9e4ee;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      padding: 45px 0 20px;
+      background: #0b2035;
+      color: #d9e4ee;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 30px;
+    }
+
+    .footer-brand {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--white);
+      font-size: 24px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .footer-about {
+      max-width: 380px;
+      margin: 0;
+      color: #b8c7d5;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .footer-column h2 {
+      margin: 0 0 14px;
+      color: var(--white);
+      font-size: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      color: #c4d1dc;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      color: #aebdca;
+      font-size: 12px;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 900px) {
+      .main-nav {
+        gap: 14px;
+      }
+
+      .category-grid,
+      .promise-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .coming-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .coming-visual {
+        min-height: 220px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand-column {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        padding-right: 17px;
+        padding-left: 17px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+      }
+
+      .brand {
+        font-size: 23px;
+      }
+
+      .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 9px 16px;
+      }
+
+      .main-nav a {
+        font-size: 13px;
+      }
+
+      .main-nav .nav-cta {
+        padding: 5px 10px;
+      }
+
+      .blog-hero {
+        padding: 58px 0 64px;
+      }
+
+      .blog-hero h1 {
+        font-size: clamp(35px, 9vw, 44px);
+      }
+
+      .blog-hero p {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .intro-section {
+        padding: 47px 0 25px;
+      }
+
+      .section-heading {
+        margin-bottom: 28px;
+        text-align: left;
+      }
+
+      .section-heading h2 {
+        font-size: 29px;
+      }
+
+      .categories-section {
+        padding: 20px 0 48px;
+      }
+
+      .category-grid,
+      .promise-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .category-card {
+        padding: 23px 20px;
+      }
+
+      .coming-section {
+        padding: 48px 0;
+      }
+
+      .coming-card {
+        gap: 25px;
+        padding: 22px;
+      }
+
+      .coming-visual {
+        min-height: 200px;
+      }
+
+      .coming-copy h2 {
+        font-size: 29px;
+      }
+
+      .promise-section {
+        padding: 48px 0;
+      }
+
+      .blog-cta {
+        padding: 48px 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-brand-column {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+
+      .category-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="index.html" aria-label="Tripvero homepage">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>Tripvero</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="blogs.html" aria-current="page">Blogs</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="services.html">Explore Services</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- BLOG HERO -->
+
+    <section class="blog-hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <span class="eyebrow">The Tripvero Travel Blog</span>
+
+          <h1>
+            Travel Inspiration, Destination Guides and Practical Tips
+          </h1>
+
+          <p>
+            Discover ideas for your next holiday, learn what to research
+            before travelling and explore useful information about
+            destinations, international tourist visas and travel preparation.
+            Our blog is being prepared for future articles.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#coming-soon">
+              Explore the Blog
+              <span aria-hidden="true">↓</span>
+            </a>
+
+            <a class="btn btn-light" href="services.html">
+              Browse Travel Resources
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">Explore Our Topics</span>
+
+          <h2>What Would You Like to Learn About?</h2>
+
+          <p>
+            The Tripvero blog is planned around practical travel topics
+            to help readers research destinations and prepare for journeys.
+            Explore the subjects we intend to cover.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BLOG CATEGORIES -->
+
+    <section class="categories-section">
+      <div class="container">
+
+        <div class="category-grid">
+
+          <article class="category-card">
+            <div class="category-icon" aria-hidden="true">D</div>
+
+            <h3>Destination Guides</h3>
+
+            <p>
+              Explore destination ideas, attractions, local experiences,
+              seasonal considerations and useful details to research
+              before choosing where to travel.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <div class="category-icon" aria-hidden="true">V</div>
+
+            <h3>International Visa Information</h3>
+
+            <p>
+              Learn which visa requirements to investigate, what travel
+              documents may be relevant and why current rules should
+              always be checked with official authorities.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <div class="category-icon" aria-hidden="true">P</div>
+
+            <h3>Holiday Planning Tips</h3>
+
+            <p>
+              Find guidance on organising itineraries, preparing documents,
+              researching transport and considering practical details
+              before departure.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <div class="category-icon" aria-hidden="true">D</div>
+
+            <h3>Dubai Travel Ideas</h3>
+
+            <p>
+              Research Dubai attractions, trip-duration ideas, sightseeing
+              options and considerations for planning a visit to the city.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <div class="category-icon" aria-hidden="true">B</div>
+
+            <h3>Travel Budget Preparation</h3>
+
+            <p>
+              Learn what to consider when estimating travel expenses,
+              including accommodation, local transport, meals, activities
+              and other trip-related costs.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <div class="category-icon" aria-hidden="true">T</div>
+
+            <h3>Travel Preparation</h3>
+
+            <p>
+              Explore checklists and planning considerations for packing,
+              travel documents, bookings and other essentials before
+              setting off on a journey.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- COMING SOON -->
+
+    <section class="coming-section" id="coming-soon">
+      <div class="container">
+
+        <div class="coming-card">
+
+          <div class="coming-visual">
+            <div class="book-icon" aria-hidden="true">T</div>
+
+            <strong>New Travel Stories Ahead</strong>
+          </div>
+
+          <div class="coming-copy">
+            <span class="coming-label">Coming Soon</span>
+
+            <h2>Our Travel Blog Is Being Prepared</h2>
+
+            <p>
+              We are preparing the Tripvero blog for future articles
+              covering destination research, travel planning, Dubai
+              holidays and international visa information.
+            </p>
+
+            <p>
+              There are no published blog articles available on this page
+              yet. Please explore our existing travel resources in the
+              meantime.
+            </p>
+
+            <a class="btn" href="services.html">
+              Explore Available Resources
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTENT APPROACH -->
+
+    <section class="promise-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-label">Our Content Approach</span>
+
+          <h2>Useful Information Before You Travel</h2>
+
+          <p>
+            When articles are published, the aim is to make travel research
+            easier through clear explanations and practical starting points.
+          </p>
+        </div>
+
+        <div class="promise-grid">
+
+          <article class="promise-item">
+            <h3>Clear, Practical Guidance</h3>
+
+            <p>
+              Articles will aim to explain travel topics in accessible
+              language and help readers identify what to research next.
+            </p>
+          </article>
+
+          <article class="promise-item">
+            <h3>Current Information Matters</h3>
+
+            <p>
+              Travel rules, visa policies, prices and schedules can change.
+              Readers should verify time-sensitive details with official
+              authorities or relevant providers.
+            </p>
+          </article>
+
+          <article class="promise-item">
+            <h3>Transparent References</h3>
+
+            <p>
+              Where articles refer readers to third-party resources,
+              the source and purpose of those links should be clear.
+              No article can guarantee a visa decision or travel outcome.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="blog-cta">
+      <div class="container">
+
+        <h2>Planning Your Next Trip?</h2>
+
+        <p>
+          While our blog is being prepared, explore travel resources
+          covering Dubai holiday ideas and international tourist visa topics.
+        </p>
+
+        <a class="btn btn-light" href="services.html">
+          Visit the Services Page
+          <span aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+          <a class="footer-brand" href="index.html">Tripvero</a>
+
+          <p class="footer-about">
+            Tripvero is a travel information website offering destination
+            inspiration, planning topics and links to selected travel
+            resources to help visitors research their journeys.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h2>Quick Links</h2>
+
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h2>Travel Resources</h2>
+
+          <nav class="footer-links" aria-label="Travel resources">
+            <a href="services.html">Dubai Holiday Ideas</a>
+            <a href="services.html">International Visa Information</a>
+            <a
+              href="https://travelsagaholidays.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Travel Saga Holidays ↗
+            </a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="current-year">2026</span> Tripvero.
+          All rights reserved.
+        </p>
+
+        <p>
+          Travel information is provided for general research purposes.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
